@@ -14,9 +14,9 @@ const cors = require('cors');
 const { DBURL } = process.env;
 mongoose.Promise = Promise;
 mongoose
-  .connect(DBURL)
+  .connect("mongodb+srv://fer:123@cluster0-endnp.mongodb.net/Butler?retryWrites=true")
   .then(() => {
-    console.log(`Connected to Mongo on ${DBURL}`)
+    console.log(`Connected to Mongo on x`)
   }).catch(err => {
     console.error('Error connecting to mongo', err)
   });
